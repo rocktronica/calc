@@ -47,7 +47,8 @@ var bookmarklet = document.getElementById("bookmarklet");
 bookmarklet.href = "javascript:(function(){" +
     "var script = document.createElement(\"script\");" +
     "script.id = \"calc_script\";" +
-    "script.src = \"" + window.location.origin + "/bookmarklet.js?\" + (+new Date());" +
+    "script.src = \"" + window.location.origin + window.location.pathname +
+        "/bookmarklet.js?\" + (+new Date());" +
     "document.body.appendChild(script);" +
 "}());";
 var instructions = document.getElementById("instructions");
