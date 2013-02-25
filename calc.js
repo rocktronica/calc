@@ -34,7 +34,7 @@ var updateOutput = function() {
     output.text(cleanValue || 0).valid(true);
 };
 input.addEventListener("keyup", updateOutput);
-input.value = localStorage.input;
+input.value = localStorage.input || "";
 updateOutput();
 
 // Handle errors
