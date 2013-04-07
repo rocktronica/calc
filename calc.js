@@ -26,9 +26,10 @@ var updateOutput = function() {
 
     var evalResult = eval(lines.join("\n")),
         // http://stackoverflow.com/a/3644302
-        cleanValue = parseFloat(Number(evalResult).toPrecision(16));
+        cleanValue = parseFloat(Number(evalResult).toPrecision(16)) || 0;
 
-    output.text(cleanValue || 0).valid(true);
+    output.text(cleanValue).valid(true);
+    document.title = cleanValue;
 };
 input.addEventListener("keyup", updateOutput);
 input.value = localStorage.input || "";
