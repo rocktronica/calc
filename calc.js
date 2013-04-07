@@ -1,8 +1,5 @@
 // AHEM: only works in chrome atm
 
-// Lazy override, not foolproof!
-this.alert = this.prompt = function() {};
-
 // Output
 var output = document.getElementById("output");
 output.text = function(text) {
